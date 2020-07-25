@@ -66,8 +66,8 @@
     border-bottom: 1px solid #eeeeee;
     height: 100px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    padding: 0 40px;
   }
   &__message-list {
     background-color: #fafafa;
@@ -77,11 +77,15 @@
   &__message-form {
     background-color: #d2d2d2;
     height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px 0 40px;
   }
 }
 
 .group-infolist {
-  padding: 35px 0 0 40px;
+  padding-top: 35px;
   &__item1 {
     font-size: 20px;
     color: #333333;
@@ -94,12 +98,14 @@
 }
 
 .group-info-edit {
-  margin:0 40px 0 0;
-  border: 1px solid #38aef0;
-  padding: 20px 36px;
-  font-size: 16px;
-  color: #38aef0;
-  text-decoration: none;
+    display: block;
+    border: 1px solid #38AEF0;
+    color: #38AEF0;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 28px;
+    padding: 0 20px;
+    text-decoration: none;
 }
 
 .message-day {
@@ -121,4 +127,33 @@
   font-size: 14px;
   color: #434a54;
   margin-bottom: 46px;
+}
+
+.form-text {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  &__textarea{
+    border: none;
+    height: 50px;
+    width: 100%;
+    padding: 0 45px 0 15px;
+  }
+  &__icon{
+    height: 50px;
+    position: absolute;
+    right: 10px;
+  }
+}
+
+.form-submit {
+  background-color: #38AEF0;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  height: 50px;
+  margin-left: 15px;
+  padding: 0 30px;
 }
