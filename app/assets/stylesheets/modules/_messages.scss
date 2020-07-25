@@ -29,19 +29,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   &__name {
     
   }
   &__icons {
+    color: #ffffff;
+    padding-left: 60px;
+    height: 20px;
     display: flex;
     justify-content: end;
-    color: #ffffff;
-    margin-left: 5px;
-    &__btn {
+    .top-items__btn--edit {
+      margin-right: 5px;
       
-      &--edit {
-        
-      }
     }
   }
 }
