@@ -19,6 +19,7 @@
   &__group-list {
     background-color: #2f3e51;
     height: calc(100vh - 100px);
+    padding: 0 20px;
   }
 }
 
@@ -43,6 +44,18 @@
       margin-right: 5px;
       
     }
+  }
+}
+
+.group-items {
+  box-sizing: border-box;
+  padding: 20px 0 40px;
+  &__name {
+    font-size: 15px;
+  }
+  &__list {
+    font-size: 11px;
+    margin-top: 5px;
   }
 }
 
