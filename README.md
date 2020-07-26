@@ -1,4 +1,4 @@
-# README
+# README(chat-spaceのDB設計)
 ## usersテーブル
 
 |Column|Type|Options|
