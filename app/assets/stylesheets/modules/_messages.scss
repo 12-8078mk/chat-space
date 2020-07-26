@@ -77,10 +77,7 @@
   &__message-form {
     background-color: #d2d2d2;
     height: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 50px 0 40px;
+    padding: 20px 50px 20px 40px;
   }
 }
 
@@ -129,24 +126,37 @@
   margin-bottom: 46px;
 }
 
-.form-text {
+.form {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  position: relative;
-  background-color: #fff;
-  &__textarea{
-    border: none;
-    height: 50px;
+  &__text {
     width: 100%;
-    padding: 0 45px 0 15px;
-  }
-  &__icon{
-    height: 50px;
-    position: absolute;
-    right: 10px;
+    position: relative;
+    background-color: #fff;
+    &--textarea{
+      border: none;
+      height: 50px;
+      width: 100%;
+      padding: 0 45px 0 15px;
+    }
+    &--icon{
+      height: 50px;
+      position: absolute;
+      right: 10px;
+      &-label {
+        line-height: 50px;
+        font-size: 25px;
+      }
+      &-Hidden {
+        display: none;
+      }
+    }
   }
 }
+
+
+
+
 
 .form-submit {
   background-color: #38AEF0;
