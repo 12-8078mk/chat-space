@@ -78,6 +78,7 @@
     background-color: #d2d2d2;
     height: 90px;
     padding: 20px 50px 20px 40px;
+    box-sizing: border-box;
   }
 }
 
@@ -140,23 +141,19 @@
       padding: 0 45px 0 15px;
     }
     &--icon{
-      height: 50px;
       position: absolute;
       right: 10px;
-      &-label {
+      line-height: 50px;
+      &--label {
         line-height: 50px;
         font-size: 25px;
       }
-      &-Hidden {
+      &--Hidden {
         display: none;
       }
     }
   }
 }
-
-
-
-
 
 .form-submit {
   background-color: #38AEF0;

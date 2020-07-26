@@ -2,7 +2,7 @@
   .chat-main__group-info
     .group-infolist
       .group-infolist__item1 test
-      .group-infolist__item2 Member:m
+      .group-infolist__item2 Member：m
     = link_to "#" , class: "group-info-edit" do
       .span
       Edit
@@ -20,6 +20,6 @@
       .form__text
         %input{type:"text" , class:"form__text--textarea" , placeholder: "type a message"}
         %label{class: "form__text--icon"}
-          = icon('far', 'image' , class:'form__text--icon-label' )
-          %input{type: "file" , class:"form__text--icon-Hidden" ,name:"message[image]"}
+          = icon('far', 'image' , class:'form__text--icon--label' )
+          %input{type: "file" , class:"form__text--icon--Hidden" ,name:"message[image]"}
       %input{type: "submit",class: "form-submit", name: "commit",value:"Send"}
