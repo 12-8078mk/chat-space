@@ -44,5 +44,5 @@
 |group_name|string|index: true, null: false|
 
 ### Association
-- belongs_to :group
-- belongs_to :user
+- has_many :group
+- belongs_to :user,throught:members
