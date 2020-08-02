@@ -1,25 +1,22 @@
 .chat-main
   .chat-main__group-info
     .group-infolist
-      .group-infolist__item1 test
-      .group-infolist__item2 Member：m
-    = link_to "#" , class: "group-info-edit" do
+      .group-infolist__item1  
+        = @group.name
+      .group-infolist__item2
+        Member：
+        - @group.users.each do |user|
+          = user.name
+    = link_to edit_group_path(@group), class: "group-info-edit" do
       .span
       Edit
   .chat-main__message-list
-    .message-day
-      .message-day__name ma
-      .message-day__day 2020/07/26(Sta) 14:00:00
-    .text おはよう
-    .message-day
-      .message-day__name ma
-      .message-day__day 2020/07/26(Sta) 15:00:00
-    .text 今日は雨
+    = render @messages
   .chat-main__message-form
-    .form
+    = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
       .form__text
-        %input{type:"text" , class:"form__text--textarea" , placeholder: "type a message"}
-        %label{class: "form__text--icon"}
-          = icon('far', 'image' , class:'form__text--icon--label' )
-          %input{type: "file" , class:"form__text--icon--Hidden" ,name:"message[image]"}
-      %input{type: "submit",class: "form-submit", name: "commit",value:"Send"}
+        = f.text_field :content, class:'form__text--textarea' , placeholder: 'type a message'
+        = f.label :image, class: 'form__text--icon' do
+          = icon('far', 'image' , class: 'form__text--icon--label')
+          = f.file_field :image, class: 'form__text--icon--Hidden'
+      = f.submit 'Send',class: 'form-submit'
