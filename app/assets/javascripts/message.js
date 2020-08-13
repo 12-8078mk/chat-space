@@ -59,5 +59,8 @@ $(function(){
       $('form')[0].reset();
       // console.log(data)
     })
+    .fail(function() {
+      alert("メッセージ送信に失敗しました");
+  });
   });
 });
